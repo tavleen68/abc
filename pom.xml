@@ -60,7 +60,12 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-		</dependency> 
+		</dependency>
+	        <dependency>
+                     <groupId>org.jfrog.buildinfo</groupId>
+                     <artifactId>artifactory-maven-plugin</artifactId>
+                     
+                </dependency>
 		
 	</dependencies>
 
@@ -72,6 +77,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.2</version>
+			</plugin>
+
 		</plugins>
 	</build>
 
