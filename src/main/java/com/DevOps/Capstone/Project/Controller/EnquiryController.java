@@ -17,7 +17,7 @@ public class EnquiryController
 	@Autowired
 	EnquiryService enqService;
 	
-	@RequestMapping(value = "/dashboard/AccountInfo")
+	@RequestMapping(value = "/BankAppTomcat/dashboard/AccountInfo")
 	public String AccountInfo(ModelMap model)
 	{
 		String UserId = dashCtrl.getUserID();

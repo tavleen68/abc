@@ -17,14 +17,14 @@ public class ResetPWContoller
 
 	private String password;
 
-	@RequestMapping("/forgotPassword")
+	@RequestMapping("/BankAppTomcat/forgotPassword")
 	public String resetPW()
 	{
 		return "ResetPassword";
 	}
 
 
-	@RequestMapping(value = "/forgotPassword/Ack", produces = "application/HTML")
+	@RequestMapping(value = "/BankAppTomcat/forgotPassword/Ack", produces = "application/HTML")
 	public String ResetPWack(@ModelAttribute ResetPwHTML HTMLobj , BindingResult result, ModelMap model) 
 	{
 		String UserId = HTMLobj.getUserId();

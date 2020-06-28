@@ -13,8 +13,17 @@ public class MainApp extends SpringBootServletInitializer {
 		return application.sources(MainApp.class);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		SpringApplication.run(MainApp.class, args);
+	
+		BankApp b = null;
+		try {
+				b = new BankApp();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			b.bank();
 		
 	}
 

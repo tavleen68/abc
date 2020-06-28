@@ -27,7 +27,7 @@ public class FundTransferController
 	private int fromAcc,toAcc, amt;
 	private String remark;
 
-	@RequestMapping("/dashboard/FundTransfer")
+	@RequestMapping("/BankAppTomcat/dashboard/FundTransfer")
 	public String FundTransfer(Model model)
 	{
 
@@ -39,7 +39,7 @@ public class FundTransferController
 	}
 	
 
-	@RequestMapping(value = "/dashboard/FundTransfer/confirm", produces = "application/HTML")
+	@RequestMapping(value = "/BankAppTomcat/dashboard/FundTransfer/confirm", produces = "application/HTML")
 	public String FundTransferConfirm(@ModelAttribute FundTransferHTML HTMLobj , BindingResult result, ModelMap model) 
 	{
 		fromAcc = HTMLobj.getFromAcc();
@@ -97,7 +97,7 @@ public class FundTransferController
 	}
 
 
-	@RequestMapping(value="/dashboard/FundTransfer/confirm/ack", produces = "application/HTML")
+	@RequestMapping(value="/BankAppTomcat/dashboard/FundTransfer/confirm/ack", produces = "application/HTML")
 	public String FundTransferAck(ModelMap model) 
 	{
 		try 

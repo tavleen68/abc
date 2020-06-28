@@ -24,7 +24,7 @@ public class DashboardController
 	private String UserName, Currency,UserID;
 	private int Bal, accountnumber;
 
-	@RequestMapping(value = "/dashboard", produces = "application/HTML")
+	@RequestMapping(value = "/BankAppTomcat/dashboard", produces = "application/HTML")
 	public String Dashboard(@ModelAttribute LoginHTML HTMLobj , BindingResult result, ModelMap model) 
 	{
 		UserID = HTMLobj.getUserId();		
@@ -80,7 +80,7 @@ public class DashboardController
 	}
 
 
-	@RequestMapping(value = "/dashboard/AccSummary")
+	@RequestMapping(value = "/BankAppTomcat/dashboard/AccSummary")
 	public String AccSummary(ModelMap model)
 	{
 		Bal = enqService.findBalance(accountnumber);
