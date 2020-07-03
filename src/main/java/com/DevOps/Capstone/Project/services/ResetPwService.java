@@ -20,9 +20,9 @@ public class ResetPwService
 	@Autowired
 	ResetPWContoller resetCtrl;
 	
-	public String getUserID(@RequestBody ResetPwHTML HTMLobj) throws EntityNotFoundException
+	public String getUserID(@RequestBody String userId2) throws EntityNotFoundException
 	{ 
-		String Userid = repoObj.getOne(HTMLobj.getUserId()).getUserID();
+		String Userid = repoObj.getOne(userId2.getUserId()).getUserID();
 		System.out.println("userID from Db in getUserID function: "+Userid);
 		return Userid;
 	}
