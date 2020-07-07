@@ -32,7 +32,7 @@ public class ResetPWContoller
 
 		try
 		{ 
-			String userID = resetService.getUserID(HTMLobj);
+			String userID = resetService.getUserID(UserId);
 			System.out.println("userID from resetService :"+userID);
 			if (userID != null)
 			{		

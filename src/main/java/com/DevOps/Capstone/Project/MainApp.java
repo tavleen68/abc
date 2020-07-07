@@ -20,7 +20,6 @@ public class MainApp extends SpringBootServletInitializer {
 		try {
 				b = new BankApp();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			b.bank();

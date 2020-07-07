@@ -1,6 +1,9 @@
 package com.DevOps.Capstone.Project.services;
 
+import java.util.Optional;
+
 import javax.persistence.EntityNotFoundException;
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,19 +15,28 @@ import com.DevOps.Capstone.Project.TableDB.LoginTB;
 import com.DevOps.Capstone.Project.repository.LoginRepository;
 
 @Service
+@Transactional
 public class ResetPwService 
 {
 	@Autowired
 	LoginRepository repoObj;
 	
-	@Autowired
+	@Autowired 
 	ResetPWContoller resetCtrl;
 	
-	public String getUserID(@RequestBody String userId2) throws EntityNotFoundException
+	public String getUserID(String userId2) throws EntityNotFoundException
 	{ 
-		String Userid = repoObj.getOne(userId2.getUserId()).getUserID();
+		Optional<LoginTB> obj = repoObj.findById(userId2);
+		if (obj.isPresent())
+		{
+		String Userid = obj.get().getUserID();
 		System.out.println("userID from Db in getUserID function: "+Userid);
 		return Userid;
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	public String updatePassword(String Id) throws EntityNotFoundException

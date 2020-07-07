@@ -1,12 +1,14 @@
 package com.DevOps.Capstone.Project.services;
 
 import javax.persistence.EntityNotFoundException;
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.DevOps.Capstone.Project.repository.LoginRepository;
 
 @Service
+@Transactional
 public class loginService 
 {
 	@Autowired
