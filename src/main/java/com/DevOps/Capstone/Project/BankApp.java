@@ -11,8 +11,8 @@ public class BankApp
 	public  void bank() throws InterruptedException 
 	{
 	
-		System.setProperty("webdriver.chrome.driver", "/abc/src/main/resources/chromedriver.exe");
-//		D://Softwares & Libs//Driver//chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", "./src/main/resources/Driver/geckodriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "./src/main/resources/Driver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
 		// URL
